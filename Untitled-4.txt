@@ -1,0 +1,4 @@
+for i in range(len(nums)):
+            t=nums[i]-target
+            if t in nums:
+                return [i,nums.index(t)]

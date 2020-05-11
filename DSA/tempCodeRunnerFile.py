@@ -1,0 +1,1 @@
+print(root.Inorder(root))
