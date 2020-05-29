@@ -12,7 +12,7 @@ while i<j:
     if i<j:
         i+=1
     else:
-        j+=1
+        j-=1
 
 
 

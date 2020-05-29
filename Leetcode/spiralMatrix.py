@@ -1,28 +1,38 @@
 def spiral(matrix):
-    top=0
-    right=0
-    left=0
-    row=0
-    bottom=0
-    rowbottom=len(matrix)-1
-    col=len(matrix[0])-1
     res=[]
+    rowbegin=0
+    colbegin=0
+    rowend=len(matrix)-1
+    colend=len(matrix[0])-1
 
-    # while row<len(matrix) and col>=0:
-    for i in range(len(matrix[col])-right):
-        res.append(matrix[row][i])
-    
-    top+=1
-    for j in range(top,len(matrix[row])):
-        res.append(matrix[j][col])
-    right+=1
+    while rowbegin<=rowend and colbegin<=colend:
+        for i in range(colbegin, colend+1):
+            res.append(matrix[rowbegin][i])
+        
+        rowbegin+=1
 
-    for k in reversed(range(len(matrix[col])-right)):
-        res.append(matrix[rowbottom][k])
-    bottom
-    for l in reversed(range())
-    
+        for i in range(rowbegin,rowend+1):
+            res.append(matrix[i][colend])
+
+        colend-=1
+
+        if colbegin<=colend:
+            for i in reversed(range(colbegin,colend+1)):
+                res.append(matrix[rowend][i])
+
+            rowend-=1
+        if rowbegin<=rowend:
+            for i in reversed(range(rowbegin,rowend+1)):
+                res.append(matrix[i][colbegin])
+            
+            colbegin+=1
+
     print(res)
+    # for k in reversed(range(len(matrix[col])-right)):
+    #     res.append(matrix[rowbottom][k])
+    # bottom
+    # for l in reversed(range())
+    
 
     
 
